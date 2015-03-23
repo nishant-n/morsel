@@ -2,6 +2,24 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 
+.error-page h1 {
+  background: url("https://www.eatmorsel.com/assets/images/logos/morsel-text.png") no-repeat scroll center top / 130px 59px rgba(0, 0, 0, 0);
+  border-bottom: 1px solid #e2ddd7;
+  display: block;
+  height: 80px;
+  margin: 10px auto 20px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 130px;
+}
+
+.error-page {
+  background: url("https://www.eatmorsel.com/assets/images/bg/octopus.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 200px 30px 40px;
+  text-align: center;
+}
 
 .row {
 	margin-left: -15px;
@@ -381,22 +399,4 @@ a:hover {text-decoration: none;}
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eee;
-}
-.error-page h1 {
-  background: url("https://www.eatmorsel.com/assets/images/logos/morsel-text.png") no-repeat scroll center top / 130px 59px rgba(0, 0, 0, 0);
-  border-bottom: 1px solid #e2ddd7;
-  display: block;
-  height: 80px;
-  margin: 10px auto 20px;
-  overflow: hidden;
-  text-indent: -9999px;
-  width: 130px;
-}
-
-.error-page {
-  background: url("https://www.eatmorsel.com/assets/images/bg/octopus.png") no-repeat scroll center top rgba(0, 0, 0, 0);
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 200px 30px 40px;
-  text-align: center;
 }
