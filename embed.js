@@ -1,8 +1,8 @@
 // Anonymous "self-invoking" function
 (function() {
     
-  function loadMorsel()
-	{
+  	function loadMorsel() {
+  		
 		var val =  document.getElementById("morsel-embed").href   
  		var post_name = val.substr(val.lastIndexOf('/') + 1);
 		var xmlhttp;
@@ -22,9 +22,10 @@
 				genrateResponse(xmlhttp,val)
 			}
 		}
-			xmlhttp.open("GET",url+post_name+".json",true);
+			xmlhttp.open("GET",url+post_name,true);
+			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 			xmlhttp.send();
-		}
+   }
 
 
  function genrateResponse(xhr,val){
