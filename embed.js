@@ -34,7 +34,7 @@
 	fileref.setAttribute("rel", "stylesheet");
 	fileref.setAttribute("type", "text/css");
 	//fileref.setAttribute("href", "https://raw.githubusercontent.com/nishant-n/morsel/master/embed.css");
-	fileref.setAttribute("href", "localhost/demo/embed.css");
+	fileref.setAttribute("href", "http://localhost/demo/embed.css");
 	document.getElementsByTagName("head")[0].appendChild(fileref) //
 
   var items = result.data.items;
