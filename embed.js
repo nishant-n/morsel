@@ -46,7 +46,7 @@
 		
 		if(status){
 			var items = result.data.items;
-
+			consol.log(result.data);
 			html +=      '<div class="modal-morsel-full-slide" >';
 			html +=          '<div class="morsel-full">';
 			html +=                '<div class="morsel-mobile-info">';
