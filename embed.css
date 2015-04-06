@@ -268,8 +268,8 @@ a:hover {text-decoration: none;}
     background-color: #f3f1ef;
     display: table;
     text-align: center;
-    height: 289px;
-    width:303px;
+    height: 320px;
+    width: 320px;
     position: relative;
 }
 /*.modal-morsel-full-slide .morsel-full .morsel-title {
@@ -315,7 +315,7 @@ a:hover {text-decoration: none;}
 .page-wrapper-details
 {
 	/*max-width:660px;*/
-	max-width:303px;
+	max-width:320px;
 	cursor: pointer;			
 }
 .modal-morsel-full-slide .item-img-wrap {
