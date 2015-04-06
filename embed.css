@@ -2,11 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 
-.modal-morsel-full-slide a {
-  color: #fff;
-  text-decoration: none;
-}
-
 .row {
 	margin-left: -15px;
 	margin-right: -15px;
@@ -384,6 +379,8 @@ a:hover {text-decoration: none;}
 }
 .modal-morsel-full-slide a{
 	font-family: "Roboto Slab","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif;
+	color: #fff;
+  	text-decoration: none;
 }
 
 .img-circle {
