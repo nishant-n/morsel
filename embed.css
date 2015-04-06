@@ -437,3 +437,7 @@ a:hover {text-decoration: none;}
 .timeago, .place-info {
   font-size: 12px;
 }
+
+abbr.timeago {
+  border: medium none;
+}
