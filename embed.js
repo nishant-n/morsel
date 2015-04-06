@@ -37,15 +37,15 @@
 		var fileref=document.createElement("link");
 		fileref.setAttribute("rel", "stylesheet");
 		fileref.setAttribute("type", "text/css");
-		fileref.setAttribute("href", "http://localhost/demo/embed.css");	
-		document.getElementsByTagName("head")[0].appendChild(fileref) //
+		fileref.setAttribute("href", "https://rawgit.com/nishant-n/morsel/staging/embed.css");	
+		document.getElementsByTagName("head")[0].appendChild(fileref);
 
 	  	
 	  	var html = '';
 		html += '<div class="page-wrapper page-wrapper-details" style="overflow-y:auto;height:auto;margin:auto;"  onclick="window.open(\''+val+'\',\'_blank\')">';
 		
 		if(status){
-			console.log(result.data);
+			
 			var items = result.data.items;			
 			html +=      '<div class="modal-morsel-full-slide" >';
 			html +=          '<div class="morsel-full">';
