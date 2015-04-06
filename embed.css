@@ -266,6 +266,7 @@ a:hover {text-decoration: none;}
 }
 .modal-morsel-full-slide .morsel-mobile-info {
     background-color: #f3f1ef;
+    display: table;
     text-align: center;
     height: 289px;
     width:303px;
@@ -281,6 +282,7 @@ a:hover {text-decoration: none;}
 }*/
 .modal-morsel-full-slide .morsel-full .morsel-title {
   color: #394038;
+  display: table-cell;
   font-size: 24px;
   font-weight: 400;
   padding: 0;
@@ -288,8 +290,11 @@ a:hover {text-decoration: none;}
   text-shadow: 0 2px 6px #000;
   text-transform: uppercase;
   transition: all 0.07s ease-out 0s;
+  letter-spacing : normal;
+  vertical-align: middle;
 }
 .modal-morsel-full-slide .user {
+    letter-spacing : normal;
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
