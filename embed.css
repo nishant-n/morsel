@@ -271,18 +271,28 @@ a:hover {text-decoration: none;}
     width:303px;
     position: relative;
 }
-.modal-morsel-full-slide .morsel-full .morsel-title {
+/*.modal-morsel-full-slide .morsel-full .morsel-title {
     color: #394038;
     font-size: 22px;
     font-weight: bold;
     padding: 0px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase;        
+}*/
+.modal-morsel-full-slide .morsel-full .morsel-title {
+  color: #394038;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0 2px 6px #000;
+  text-transform: uppercase;
+  transition: all 0.07s ease-out 0s;
 }
 .modal-morsel-full-slide .user {
     display: inline-block;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 400;
     line-height: normal; /*44px;*/
     vertical-align: middle;
     padding: 5px;
