@@ -377,11 +377,6 @@ a:hover {text-decoration: none;}
 .social-sharing > .btn-social {
     font-size: 0;
 }
-.modal-morsel-full-slide a{
-	font-family: "Roboto Slab","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif;
-	color: #fff;
-  	text-decoration: none;
-}
 
 .img-circle {
   border-radius: 50%;
@@ -431,4 +426,10 @@ a:hover {text-decoration: none;}
 
 .modal-morsel-full-slide .morsel-full .morsel-title {
   color: #fff;
+}
+
+.modal-morsel-full-slide a{
+	font-family: "Roboto Slab","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif;
+	color: #fff;
+  	text-decoration: none;
 }
