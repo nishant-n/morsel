@@ -120,7 +120,10 @@ function timeAgo(selector) {
 			              <span class="profile-pic-link profile-pic-xs">';
 			            html += '<img class="img-circle"  src="'+result.data.creator.photos._40x40+'"></span>';
 			            html += '<br/><a href="https://www.eatmorsel.com/'+result.data.creator.username+'">'+result.data.creator.first_name+' '+result.data.creator.last_name+'</a>';
-			            html += '<br/><span class="place-info">'+result.data.place.name+' '+result.data.place.city+' '+result.data.place.state+'</span><br/><abbr class="timeago time-info" title="'+result.data.created_at+'"></abbr>\
+			            if(result.data.place){
+			            	html += '<br/><span class="place-info">'+result.data.place.name+' '+result.data.place.city+' '+result.data.place.state+'</span>';	
+			            }			            
+			            html +='<br/><abbr class="timeago time-info" title="'+result.data.created_at+'"></abbr>\
 			            </div>\
 			        </div>';
 
