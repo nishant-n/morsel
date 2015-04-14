@@ -51,7 +51,7 @@ function timeAgo(selector) {
     };
 
     var elements = document.getElementsByClassName('timeago');
-    
+
     for (var i in elements) {
         var $this = elements[i];
         if (typeof $this === 'object') {
@@ -64,13 +64,13 @@ function timeAgo(selector) {
 }
 // Anonymous "self-invoking" function
 (function() {
-    
+
   	function loadMorsel() {
 
-		var val =  document.getElementById("morsel-embed").href   
+		var val =  document.getElementById("morsel-embed").href
  		var post_name = val.substr(val.lastIndexOf('/') + 1);
 		var xmlhttp;
-		var url ="https://api.eatmorsel.com/morsels/";
+		var url ="https://api-staging.eatmorsel.com/morsels/";
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp = new XMLHttpRequest();
@@ -83,10 +83,10 @@ function timeAgo(selector) {
 		{
 			if (xmlhttp.readyState==4 )	{
 				if (xmlhttp.status==200){
-					genrateResponse(xmlhttp,val,true);					
+					genrateResponse(xmlhttp,val,true);
 				} else if (xmlhttp.status==404){
 					genrateResponse(xmlhttp,val,false);
-				}				
+				}
 			}
 		}
 			xmlhttp.open("GET",url+post_name,true);
@@ -102,16 +102,16 @@ function timeAgo(selector) {
 		var fileref=document.createElement("link");
 		fileref.setAttribute("rel", "stylesheet");
 		fileref.setAttribute("type", "text/css");
-		fileref.setAttribute("href", "https://rawgit.com/nishant-n/morsel/staging/embed.css");	
+		fileref.setAttribute("href", "https://rawgit.com/nishant-n/morsel/staging/embed.css");
 		document.getElementsByTagName("head")[0].appendChild(fileref);
-	  	
+
 	  	var html = '';
 		//html += '<div class="page-wrapper page-wrapper-details" style="overflow-y:auto;height:auto;margin:auto;"  onclick="window.open(\''+val+'\',\'_blank\')">';1
 		html += '<div class="page-wrapper page-wrapper-details" style="overflow-y:auto;height:auto;margin:auto;">';
-		
+
 		if(status){
-			
-			var items = result.data.items;			
+
+			var items = result.data.items;
 			html +=      '<div class="modal-morsel-full-slide" >';
 			html +=          '<div class="morsel-full">';
 			html +=                '<div class="morsel-mobile-info" style="background-image:url(\''+result.data.primary_item_photos._320x320+'\')">';
@@ -121,8 +121,8 @@ function timeAgo(selector) {
 			            html += '<img class="img-circle"  src="'+result.data.creator.photos._40x40+'"></span>';
 			            html += '<br/><a href="https://www.eatmorsel.com/'+result.data.creator.username+'">'+result.data.creator.first_name+' '+result.data.creator.last_name+'</a>';
 			            if(result.data.place){
-			            	html += '<br/><span class="place-info">'+result.data.place.name+' '+result.data.place.city+' '+result.data.place.state+'</span>';	
-			            }			            
+			            	html += '<br/><span class="place-info">'+result.data.place.name+' '+result.data.place.city+' '+result.data.place.state+'</span>';
+			            }
 			            html +='<br/><abbr class="timeago time-info" title="'+result.data.created_at+'"></abbr>\
 			            </div>\
 			        </div>';
@@ -147,18 +147,18 @@ function timeAgo(selector) {
 						}*/
 		    html += '</div>\
 		    </div>\
-			</div>';	
-			
+			</div>';
+
 		} else {
 			console.log("Errors : ",result.errors);
 			html +=     '<div class="error-page" >\
 							<h1>Morsel</h1>\
 							<p>Opps something wrong is happen!</p>\
 						</div>\
-					</div>';	
+					</div>';
 		}
 
-		var wrapper = document.getElementById('morsel-embed-wrapper');		
+		var wrapper = document.getElementById('morsel-embed-wrapper');
 	  	wrapper.innerHTML= html;
 	  	timeAgo();
 	}
