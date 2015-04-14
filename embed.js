@@ -22,10 +22,8 @@ function timeAgo(selector) {
     var timer = function(time) {
         if (!time)
             return;
-        time = time.replace(/\.\d+/, ""); // remove milliseconds
-        time = time.replace(/-/, "/").replace(/-/, "/");
-        time = time.replace(/T/, " ").replace(/Z/, " UTC");
-        time = time.replace(/([\+\-]\d\d)\:?(\d\d)/, " $1$2"); // -04:00 -> -0400
+        // /time = new Date(time)
+
         time = new Date(time * 1000 || time);
 
         var now = new Date();
@@ -44,7 +42,7 @@ function timeAgo(selector) {
                 hours < 42 && template('day', 1) ||
                 days < 30 && template('days', days) ||
                 days < 45 && template('month', 1) ||
-                days < 365 && template('months', days / 30) ||
+                days < 365 && template('months', days / 30.41) ||
                 years < 1.5 && template('year', 1) ||
                 template('years', years)
                 ) + templates.suffix;
