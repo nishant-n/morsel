@@ -1,3 +1,4 @@
+
 function timeAgo(selector) {
 
     var templates = {
@@ -61,11 +62,11 @@ function timeAgo(selector) {
 
 }
 // Anonymous "self-invoking" function
-(function() {
 
-  	function loadMorsel() {
 
-		var val =  document.getElementById("morsel-embed").href
+  	function loadMorsel(elmid,url) {
+
+		var val =  url
  		var post_name = val.substr(val.lastIndexOf('/') + 1);
 		var xmlhttp;
 		var url ="https://api.eatmorsel.com/morsels/";
@@ -81,9 +82,9 @@ function timeAgo(selector) {
 		{
 			if (xmlhttp.readyState==4 )	{
 				if (xmlhttp.status==200){
-					genrateResponse(xmlhttp,val,true);
+					genrateResponse(xmlhttp,val,true,elmid);
 				} else if (xmlhttp.status==404){
-					genrateResponse(xmlhttp,val,false);
+					genrateResponse(xmlhttp,val,false,elmid);
 				}
 			}
 		}
@@ -93,7 +94,7 @@ function timeAgo(selector) {
    	}
 
 
-	function genrateResponse(xhr,val,status){
+	function genrateResponse(xhr,val,status,elmid){
 
 	 	var result = JSON.parse(xhr.response);
 
@@ -156,9 +157,8 @@ function timeAgo(selector) {
 					</div>';
 		}
 
-		var wrapper = document.getElementById('morsel-embed-wrapper');
+		var wrapper = document.getElementById(elmid);
 	  	wrapper.innerHTML= html;
 	  	timeAgo();
 	}
-	loadMorsel();
-})();
+	
