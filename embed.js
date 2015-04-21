@@ -118,7 +118,7 @@ function timeAgo(selector) {
 			if(result.data.primary_item_photos._320x320){
 				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+primaryPhotos+'\')">';
 			} else {
-				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+items[index].photos._320x320+'\')">';
+				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+items[0].photos._320x320+'\')">';
 			}
 
 			html +=   '<h2 bo-text="morsel.title" class="morsel-title"><a href="'+hostUrl+'" target="_blank">'+result.data.title+'</a></h2>';
