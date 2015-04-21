@@ -63,9 +63,10 @@ function timeAgo(selector) {
 }
 // Anonymous "self-invoking" function
 
-  	function loadMorsel(elmid,url) {
+  	function loadMorsel(elmid,morselurl,hosturl) {
 
-		var val =  url
+		var val = morselurl;
+		var hostUrl = hosturl;
  		var post_name = val.substr(val.lastIndexOf('/') + 1);
 		var xmlhttp;
 		var url ="https://api.eatmorsel.com/morsels/";
@@ -81,9 +82,9 @@ function timeAgo(selector) {
 		{
 			if (xmlhttp.readyState==4 )	{
 				if (xmlhttp.status==200){
-					genrateResponse(xmlhttp,val,true,elmid);
+					genrateResponse(xmlhttp,val,true,elmid,hostUrl);
 				} else if (xmlhttp.status==404){
-					genrateResponse(xmlhttp,val,false,elmid);
+					genrateResponse(xmlhttp,val,false,elmid,hostUrl);
 				}
 			}
 		}
@@ -93,14 +94,14 @@ function timeAgo(selector) {
    	}
 
 
-	function genrateResponse(xhr,val,status,elmid){
+	function genrateResponse(xhr,val,status,elmid,hostUrl){
 
 	 	var result = JSON.parse(xhr.response);
 
 		var fileref=document.createElement("link");
-		fileref.setAttribute("rel", "stylesheet");
-		fileref.setAttribute("type", "text/css");
-		fileref.setAttribute("href", "https://rawgit.com/nishant-n/morsel/morsel-wp-plugin-staging/embed.css");
+		fileref.setAttribute("rel","stylesheet");
+		fileref.setAttribute("type","text/css");
+		fileref.setAttribute("href","https://rawgit.com/nishant-n/morsel/morsel-wp-plugin-staging/embed.css");
 		document.getElementsByTagName("head")[0].appendChild(fileref);
 
 	  	var html = '';
@@ -113,7 +114,7 @@ function timeAgo(selector) {
 			html +=      '<div class="modal-morsel-full-slide" >';
 			html +=          '<div class="morsel-full">';
 			html +=                '<div class="morsel-mobile-info" style="background-image:url(\''+result.data.primary_item_photos._320x320+'\')">';
-			html +=   '<h2 bo-text="morsel.title" class="morsel-title"><a href="'+val+'" target="_blank">'+result.data.title+'</a></h2>';
+			html +=   '<h2 bo-text="morsel.title" class="morsel-title"><a href="'+hostUrl+'" target="_blank">'+result.data.title+'</a></h2>';
 			html +=   '<div class="user">\
 			              <span class="profile-pic-link profile-pic-xs">';
 			            html += '<img class="img-circle"  src="'+result.data.creator.photos._40x40+'"></span>';
