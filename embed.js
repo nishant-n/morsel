@@ -111,9 +111,16 @@ function timeAgo(selector) {
 		if(status){
 
 			var items = result.data.items;
+						
 			html +=      '<div class="modal-morsel-full-slide" >';
 			html +=          '<div class="morsel-full">';
-			html +=                '<div class="morsel-mobile-info" style="background-image:url(\''+result.data.primary_item_photos._320x320+'\')">';
+			
+			if(result.data.primary_item_photos._320x320){
+				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+primaryPhotos+'\')">';
+			} else {
+				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+items[index].photos._320x320+'\')">';
+			}
+
 			html +=   '<h2 bo-text="morsel.title" class="morsel-title"><a href="'+hostUrl+'" target="_blank">'+result.data.title+'</a></h2>';
 			html +=   '<div class="user">\
 			              <span class="profile-pic-link profile-pic-xs">';
