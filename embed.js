@@ -63,7 +63,6 @@ function timeAgo(selector) {
 }
 // Anonymous "self-invoking" function
 
-
   	function loadMorsel(elmid,url) {
 
 		var val =  url
