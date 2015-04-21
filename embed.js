@@ -115,8 +115,10 @@ function timeAgo(selector) {
 			html +=      '<div class="modal-morsel-full-slide" >';
 			html +=          '<div class="morsel-full">';
 			
-			if(result.data.primary_item_photos._320x320){
-				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+primaryPhotos+'\')">';
+			console.log("result.data.primary_item_photos : ",result.data.primary_item_photos);	
+
+			if(result.data.primary_item_photos){
+				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+result.data.primary_item_photos._320x320+'\')">';
 			} else {
 				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+items[0].photos._320x320+'\')">';
 			}
