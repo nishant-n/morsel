@@ -69,7 +69,7 @@ function timeAgo(selector) {
 		var hostUrl = hosturl;
  		var post_name = val.substr(val.lastIndexOf('/') + 1);
 		var xmlhttp;
-		var url ="https://api.eatmorsel.com/morsels/";
+		var url ="https://api-staging.eatmorsel.com/morsels/";
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp = new XMLHttpRequest();
