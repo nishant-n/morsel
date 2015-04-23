@@ -63,11 +63,10 @@ function timeAgo(selector) {
 }
 // Anonymous "self-invoking" function
 
-  	function loadMorsel(elmid,morselurl,hosturl) {
+  	function loadMorsel(elmid,url) {
 
-		var val = morselurl;
-		var hostUrl = hosturl;
- 		var post_name = val.substr(val.lastIndexOf('/') + 1);
+		var val = url;
+		var post_name = val.substr(val.indexOf('?morselid=') + 10);
 		var xmlhttp;
 		var url ="https://api-staging.eatmorsel.com/morsels/";
 		if (window.XMLHttpRequest)
@@ -82,9 +81,9 @@ function timeAgo(selector) {
 		{
 			if (xmlhttp.readyState==4 )	{
 				if (xmlhttp.status==200){
-					genrateResponse(xmlhttp,val,true,elmid,hostUrl);
+					genrateResponse(xmlhttp,val,true,elmid);
 				} else if (xmlhttp.status==404){
-					genrateResponse(xmlhttp,val,false,elmid,hostUrl);
+					genrateResponse(xmlhttp,val,false,elmid);
 				}
 			}
 		}
@@ -94,7 +93,7 @@ function timeAgo(selector) {
    	}
 
 
-	function genrateResponse(xhr,val,status,elmid,hostUrl){
+	function genrateResponse(xhr,val,status,elmid){
 
 	 	var result = JSON.parse(xhr.response);
 
@@ -125,7 +124,7 @@ function timeAgo(selector) {
 				html +=         '<div class="morsel-mobile-info" style="background-color: #ffffff; border: 1px solid #777;">';
 			}
 
-			html +=   '<h2 bo-text="morsel.title" class="morsel-title"><a href="'+hostUrl+'" target="_blank">'+result.data.title+'</a></h2>';
+			html +=   '<h2 bo-text="morsel.title" class="morsel-title"><a href="'+val+'" target="_blank">'+result.data.title+'</a></h2>';
 			html +=   '<div class="user">\
 			              <span class="profile-pic-link profile-pic-xs">';
 			            html += '<img class="img-circle"  src="'+result.data.creator.photos._40x40+'"></span>';
