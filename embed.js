@@ -68,7 +68,7 @@ function timeAgo(selector) {
 		var val = url;
 		var post_name = val.substr(val.indexOf('?morselid=') + 10);
 		var xmlhttp;
-		var url ="https://api-staging.eatmorsel.com/morsels/";
+		var url ="https://api.eatmorsel.com/morsels/";
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp = new XMLHttpRequest();
