@@ -100,7 +100,7 @@ function timeAgo(selector) {
 		var fileref=document.createElement("link");
 		fileref.setAttribute("rel","stylesheet");
 		fileref.setAttribute("type","text/css");
-		fileref.setAttribute("href","https://rawgit.com/nishant-n/morsel/morsel-wp-plugin-staging/embed.css");
+		fileref.setAttribute("href","https://rawgit.com/nishant-n/morsel/morsel-wp-plugin-production/embed.css");
 		document.getElementsByTagName("head")[0].appendChild(fileref);
 
 	  	var html = '';
