@@ -17,6 +17,7 @@
 		}
 		xmlhttp.onreadystatechange=function()
 		{
+
 			if (xmlhttp.readyState==4 )	{
 				if (xmlhttp.status==200){
 					genrateResponse(xmlhttp,val,true);					
@@ -53,9 +54,16 @@
 			html +=   '<h2 bo-text="morsel.title" class="morsel-title">'+result.data.title+'</h2>';
 			html +=   '<div class="user">\
 			              <span class="profile-pic-link profile-pic-xs">';
+			                 if(result.data.creator.photos){
 			                 html += '<img class="img-circle"  src="'+result.data.creator.photos._40x40+'">';
+			                }
+			                else{
+			                  html += '<img class="img-circle"  src="https://www.eatmorsel.com/assets/images/utility/avatars/avatar_40x40.jpg">';
+			                }
+
 			             html += '</span>\
 			               '+result.data.creator.first_name+' '+result.data.creator.last_name+'\
+			                }
 			          </div>\
 			        </div>';
 
