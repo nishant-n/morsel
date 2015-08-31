@@ -127,7 +127,11 @@ function timeAgo(selector) {
 			html +=   '<h2 bo-text="morsel.title" class="morsel-title"><a href="'+val+'" target="_blank">'+result.data.title+'</a></h2>';
 			html +=   '<div class="user">\
 			              <span class="profile-pic-link profile-pic-xs">';
+			            if(result.data.creator.photos){  
 			            html += '<img class="img-circle"  src="'+result.data.creator.photos._40x40+'"></span>';
+			            }else{
+			             html += '<img class="img-circle"  src="https://www.eatmorsel.com/assets/images/utility/avatars/avatar_40x40.jpg"></span>';	
+			            }
 			            html += '<br/><a href="https://www.eatmorsel.com/'+result.data.creator.username+'">'+result.data.creator.first_name+' '+result.data.creator.last_name+'</a>';
 			            if(result.data.place){
 			            	html += '<br/><span class="place-info">'+result.data.place.name+' '+result.data.place.city+' '+result.data.place.state+'</span>';
