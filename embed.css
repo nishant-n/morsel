@@ -2,25 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 
-.error-page h1 {
-  background: url("https://www.eatmorsel.com/assets/images/logos/morsel-text.png") no-repeat scroll center top / 130px 59px rgba(0, 0, 0, 0);
-  border-bottom: 1px solid #e2ddd7;
-  display: block;
-  height: 80px;
-  margin: 10px auto 20px;
-  overflow: hidden;
-  text-indent: -9999px;
-  width: 130px;
-}
-
-.error-page {
-  background: url("https://www.eatmorsel.com/assets/images/bg/octopus.png") no-repeat scroll center top rgba(0, 0, 0, 0);
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 200px 30px 40px;
-  text-align: center;
-}
-
 .row {
 	margin-left: -15px;
 	margin-right: -15px;
@@ -35,15 +16,12 @@
 	clear: both;
 }
 
-
 .spacer {
 	display: block;
 	width: 100%;
 	height: auto;
 	z-index: -1;
 }
-
-
 
 .page-wrapper {
 	width: 100%;
@@ -72,7 +50,8 @@
 
 @media (min-width: 768px) {
 	.page-wrapper {
-		background-color: #f3f2f0;
+		/*background-color: #f3f2f0;*/
+		background-color: #fff;
 	}
 
 	.main-view {
@@ -287,23 +266,46 @@ a:hover {text-decoration: none;}
 }
 .modal-morsel-full-slide .morsel-mobile-info {
     background-color: #f3f1ef;
+    display: table;
     text-align: center;
+    height: 320px;
+    width: 320px;
+    position: relative;
 }
-.modal-morsel-full-slide .morsel-full .morsel-title {
+/*.modal-morsel-full-slide .morsel-full .morsel-title {
     color: #394038;
     font-size: 22px;
     font-weight: bold;
     padding: 0px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase;        
+}*/
+.modal-morsel-full-slide .morsel-full .morsel-title {
+  color: #394038;
+  display: table-cell;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0 2px 6px #000;
+  text-transform: uppercase;
+  transition: all 0.07s ease-out 0s;
+  letter-spacing : normal;
+  vertical-align: middle;
 }
 .modal-morsel-full-slide .user {
+    letter-spacing : normal;
     display: inline-block;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 400;
     line-height: normal; /*44px;*/
     vertical-align: middle;
     padding: 5px;
+    bottom: 0px;
+    left:0px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
     
 }
 .morsel-mobile-info h2, .morsel-mobile-info .user{
@@ -312,9 +314,9 @@ a:hover {text-decoration: none;}
 
 .page-wrapper-details
 {
-	max-width:660px;
-	cursor: pointer;
-			
+	/*max-width:660px;*/
+	max-width:320px;
+	cursor: pointer;			
 }
 .modal-morsel-full-slide .item-img-wrap {
     height: 100%;    
@@ -375,9 +377,6 @@ a:hover {text-decoration: none;}
 .social-sharing > .btn-social {
     font-size: 0;
 }
-.modal-morsel-full-slide a{
-	font-family: "Roboto Slab","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif;
-}
 
 .img-circle {
   border-radius: 50%;
@@ -392,11 +391,53 @@ a:hover {text-decoration: none;}
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
+  color: #333;  
 }
 #morsel-embed-wrapper hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eee;
+}
+
+.error-page h1 {
+  background: url("https://www.eatmorsel.com/assets/images/logos/morsel-text.png") no-repeat scroll center top / 130px 59px rgba(0, 0, 0, 0);
+  border-bottom: 1px solid #e2ddd7;
+  display: block;
+  height: 80px;
+  margin: 10px auto 20px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 130px;
+}
+
+.error-page {
+  background: url("https://www.eatmorsel.com/assets/images/bg/octopus.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 200px 30px 40px;
+  text-align: center;
+}
+
+.morsel-mobile-info {
+  background-size: 100% auto;
+  color:#fff;
+}
+
+.modal-morsel-full-slide .morsel-full .morsel-title {
+  color: #fff;
+}
+
+.modal-morsel-full-slide a{
+	font-family: "Roboto Slab","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif;
+	color: #fff;
+  	text-decoration: none;
+}
+
+.timeago, .place-info {
+  font-size: 12px;
+}
+
+abbr.timeago {
+  border: medium none;
 }
