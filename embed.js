@@ -87,7 +87,7 @@ function timeAgo(selector) {
 				}
 			}
 		}
-			xmlhttp.open("GET",url+post_name,false);
+			xmlhttp.open("GET",url+post_name,true);
 			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 			xmlhttp.send();
    	}
