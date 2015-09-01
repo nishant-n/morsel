@@ -114,7 +114,7 @@ function timeAgo(selector) {
 			html +=      '<div class="modal-morsel-full-slide" >';
 			html +=          '<div class="morsel-full">';
 			
-			console.log("result.data.primary_item_photos : ",result.data.primary_item_photos);
+			//console.log("result.data.primary_item_photos : ",result.data.primary_item_photos);
 
 			if(result.data.primary_item_photos){
 				html +=         '<div class="morsel-mobile-info" style="background-image:url(\''+result.data.primary_item_photos._320x320+'\')">';
