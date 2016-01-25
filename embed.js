@@ -6,7 +6,8 @@
 		var val =  document.getElementById("morsel-embed").href   
  		var post_name = val.substr(val.lastIndexOf('/') + 1);
 		var xmlhttp;
-		var url ="https://api.eatmorsel.com/morsels/";
+		//var url ="https://api.eatmorsel.com/morsels/";
+		var url ="https://morsel-api.herokuapp.com/morsels/";
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp = new XMLHttpRequest();
